@@ -6,11 +6,11 @@ const UserSchema = new mongoose.Schema(
 		email: { type: String, required: true, unique: true },
 		password: { type: String, required: true },
 		profilePic: { type: String, default: "" },
-		ifAdmin: { type: Boolean, default: false },
+		isAdmin: { type: Boolean, default: false },
 	},
 	{
 		timestamps: true,
 	}
 );
 
-module.export = mongoose.model("User", UserSchema);
+module.exports = mongoose.model("User", UserSchema);
